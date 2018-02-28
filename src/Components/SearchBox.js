@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 const InputBox = styled.div`
   position: relative;
-  box-shadow: 0 6px 8px 4px rgba(23, 28, 33, 0.9);
   padding: 32px 0;
-  margin: 20%;
-  margin-top: 0rem;
+  margin: 25%;
+  margin-top: 2rem;
+  margin-bottom: 15rem;
+  background-color: #24292e;
+  border-radius: 0.5rem;
 `
 
 const ContentSpacing = styled.div`

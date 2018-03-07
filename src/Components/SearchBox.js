@@ -43,13 +43,28 @@ const InputBoxInput = styled.input`
   outline: none;
 `
 
+
 class searchBox extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.state = {value: null};
+  }
+
+  handleKeyPress = (event) => {
+    if (event.key == 'Enter') {
+      console.log(event.target.value);
+    }
+  }
+
+
   render() {
     return (
       <InputBox>
         <ContentSpacing>
           <InputBoxLabel> Search for an Artist </InputBoxLabel>
-          <InputBoxInput type = "text" Hello placeholder="Start Typing..."/>
+          <InputBoxInput type = "text" Hello placeholder="Start Typing..." onKeyPress={this.handleKeyPress}/>
         </ContentSpacing>
       </InputBox>
     );

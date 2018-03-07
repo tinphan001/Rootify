@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import './styled/ignoreLink.css'
 import AboutSection from './About'
 import ContactSection from './Contact'
+import { getArtist } from '../Services/SpotifySrv'
 
 const Container = styled.div`
   background-image: linear-gradient(to left, rgb(22, 146, 187), rgb(1, 38, 144));
@@ -27,7 +28,12 @@ const Intro = styled.h1`
 
 `
 
+
 class LandingPage extends Component {
+  getArtistHere() {
+    getArtist()
+  }
+
   render() {
     return (
       <Container>

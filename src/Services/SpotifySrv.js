@@ -1,5 +1,3 @@
-
-
   var SpotifyWebApi = require('spotify-web-api-node');
 
   var spotifyApi = new SpotifyWebApi({
@@ -8,13 +6,12 @@
     redirectUri : 'http://www.example.com/callback'
   });
 
-  var getArtist = () => {
+  var getArtist = (name) => {
 
-  spotifyApi.setAccessToken('BQDnJsWdDsdUVBMa_hZi1sGmw3IY4OhOjibcmfgjSfI1BGyvWHlOqri1kRjOijFC_Vseb_y-umCy-nL2I9GvM6_j-R_E996qwcd-VhZKjT81gZHVI90Uo64czkAZDaTUl13ipw3iBuprhJnJFw')
-  spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
+  spotifyApi.setAccessToken('BQC4GXWPTEnmiIG-22B8KT08Oa_kNRB-g6SRV5vXy6v2KBP9j_w9CdecybeaKQUBkR-2wrko4rAh1w4ljau33d-OAGsWX2O1lFmTmRxtN-bcba5Y3PgZXvgLp9E1eU_3YBqVugthtQPivxWt9Q')
+  spotifyApi.searchArtists(name, 'artist')
     .then(function(data) {
-      console.log('Artist albums', data);
-      console.log('Artist albums', data.body);
+      console.log('Search artists by ' + name, data.body);
     }, function(err) {
       console.error(err);
     });

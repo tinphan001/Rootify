@@ -49,12 +49,13 @@ class searchBox extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: null};
+    this.state = {searchInput: ""};
   }
 
-  handleKeyPress = (event) => {
+  handleSearchInput = (event) => {
     if (event.key == 'Enter') {
-      console.log(event.target.value);
+      let value = event.target.value
+      this.props.handleSearchInput(value)
     }
   }
 
@@ -64,7 +65,7 @@ class searchBox extends Component {
       <InputBox>
         <ContentSpacing>
           <InputBoxLabel> Search for an Artist </InputBoxLabel>
-          <InputBoxInput type = "text" Hello placeholder="Start Typing..." onKeyPress={this.handleKeyPress}/>
+          <InputBoxInput type = "text" Hello placeholder="Start Typing..." onKeyPress={this.handleSearchInput}/>
         </ContentSpacing>
       </InputBox>
     );

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import LandingPage from '../src/Components/LandingPage'
+import LandingPageContainer from '../src/Container/LandingPageContainer'
 import AboutPage from '../src/Components/About'
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <LandingPage/>
+        <LandingPageContainer/>
       </div>
     );
   }

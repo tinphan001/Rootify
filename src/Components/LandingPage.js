@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Prop } from 'react'
 import styled from 'styled-components'
 import Banner from './Banner'
 import SearchBox from './SearchBox'
@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 import './styled/ignoreLink.css'
 import AboutSection from './About'
 import ContactSection from './Contact'
-import { getArtist } from '../Services/SpotifySrv'
+import PropTypes from 'prop-types'
+
+
 
 const Container = styled.div`
   background-image: linear-gradient(to left, rgb(22, 146, 187), rgb(1, 38, 144));
@@ -28,10 +30,18 @@ const Intro = styled.h1`
 
 `
 
+const propType = {
+  searchInput: PropTypes.String
+}
+
+const defaultProp = {
+  searchInput: ""
+}
 
 class LandingPage extends Component {
-  getArtistHere() {
-    getArtist()
+
+  componentDidMount() {
+    console.log(this.props);
   }
 
   render() {
@@ -41,12 +51,16 @@ class LandingPage extends Component {
         <Intro>
           <Link to="/" className="ignoreLink">Rootify</Link>
         </Intro>
-        <SearchBox/>
+        <SearchBox handleSearchInput={this.props.handleSearchInput}/>
         <AboutSection/>
         <ContactSection/>
       </Container>
     );
   }
 }
+
+LandingPage.propType = PropTypes
+LandingPage.defaultProp = defaultProp
+
 
 export default LandingPage

@@ -8,7 +8,7 @@
 
   var getArtist = (name) => {
 
-  spotifyApi.setAccessToken('BQC4GXWPTEnmiIG-22B8KT08Oa_kNRB-g6SRV5vXy6v2KBP9j_w9CdecybeaKQUBkR-2wrko4rAh1w4ljau33d-OAGsWX2O1lFmTmRxtN-bcba5Y3PgZXvgLp9E1eU_3YBqVugthtQPivxWt9Q')
+  spotifyApi.setAccessToken('BQBIytH8Q4-xPzLqK6rkSZsS1Zv9CgjROABBy9Din9cNIkpwFVO34kT1cpRcuXBiA2kEQSXhYaQ6ymbSI_q4VmfWsxrORF8eHKxzxxW9yRNgD_x31zBLr7uP8a8WfiIxgd1uYXcoYTVSsYS26w')
   spotifyApi.searchArtists(name, 'artist')
     .then(function(data) {
       console.log('Search artists by ' + name, data.body);

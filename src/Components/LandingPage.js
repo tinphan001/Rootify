@@ -4,31 +4,11 @@ import Banner from './Banner'
 import SearchBox from './SearchBox'
 import { Link } from 'react-router-dom'
 import './styled/ignoreLink.css'
-import AboutSection from './About'
-import ContactSection from './Contact'
+import AboutSection from './AboutSection'
+import ContactSection from './ContactSection'
 import PropTypes from 'prop-types'
-
-
-
-const Container = styled.div`
-  background-image: linear-gradient(to left, rgb(22, 146, 187), rgb(1, 38, 144));
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-`
-
-const Intro = styled.h1`
-  font-size: 82px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 1200;
-  display: flex;
-  color: white;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 5rem;
-  justify-content: center;
-
-`
+import Container from './Container'
+import Intro from './Intro'
 
 const propType = {
   searchInput: PropTypes.String

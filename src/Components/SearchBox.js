@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Redirect } from 'react-router-dom'
 
 const InputBox = styled.div`
   position: relative;
@@ -43,24 +44,28 @@ const InputBoxInput = styled.input`
   outline: none;
 `
 
-
 class searchBox extends Component {
 
 
   constructor(props) {
     super(props);
-    this.state = {searchInput: ""};
+    this.state = {searchInput: "", submitted: false};
   }
 
   handleSearchInput = (event) => {
     if (event.key == 'Enter') {
       let value = event.target.value
       this.props.handleSearchInput(value)
+      this.setState({submitted: true})
     }
   }
 
 
   render() {
+    if(this.state.submitted) {
+      return <Redirect push to='/ArtistSearch'/>
+    }
+
     return (
       <InputBox>
         <ContentSpacing>

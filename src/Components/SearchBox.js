@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
 
-const InputBox = styled.div`
+const Container = styled.div`
   position: relative;
   padding: 32px 0;
   margin: 25%;
@@ -44,7 +44,7 @@ const InputBoxInput = styled.input`
   outline: none;
 `
 
-class searchBox extends Component {
+class SearchBox extends Component {
 
 
   constructor(props) {
@@ -67,14 +67,14 @@ class searchBox extends Component {
     }
 
     return (
-      <InputBox>
+      <Container>
         <ContentSpacing>
           <InputBoxLabel> Search for an Artist </InputBoxLabel>
           <InputBoxInput type = "text" Hello placeholder="Start Typing..." onKeyPress={this.handleSearchInput}/>
         </ContentSpacing>
-      </InputBox>
+      </Container>
     );
   }
 }
 
-export default searchBox
+export default SearchBox

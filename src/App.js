@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import LandingPageContainer from '../src/Container/LandingPageContainer'
-import ArtistSearch from '../src/Components/ArtistSearch'
+import ArtistSearchContainer from '../src/Container/ArtistSearchContainer'
 
 class Home extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Home} />
-          <Route exact path="/ArtistSearch" component={ArtistSearch} />
+          <Route exact path="/ArtistSearch" component={ArtistSearchContainer} />
         </div>
       </Router>
     );

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 import './styled/ignoreLink.css'
 
 const Container = styled.div`
-  background-color: #3d3935;
+  background-image: linear-gradient(to left, rgb(22, 146, 187), rgb(1, 38, 144));
   height: 30rem;
   display:flex
-  justify: column;
+  justify-content: column;
   min-height: 30rem;
 `
 

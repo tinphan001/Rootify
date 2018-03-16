@@ -8,7 +8,7 @@ const Intro = styled.h1`
   color: white;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   justify-content: center;
 `
 

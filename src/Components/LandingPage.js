@@ -20,18 +20,16 @@ const defaultProp = {
 
 class LandingPage extends Component {
 
-  componentDidMount() {
-    console.log(this.props);
-  }
 
   render() {
+    console.log("INSIDE LADNING PAGE", this.props);
     return (
       <Container>
         <Banner/>
         <Intro>
           <Link to="/" className="ignoreLink">Rootify</Link>
         </Intro>
-        <SearchBox handleSearchInput={this.props.handleSearchInput}/>
+        <SearchBox pathName={this.props.pathName} handleSearchInput={this.props.handleSearchInput}/>
         <AboutSection/>
         <ContactSection/>
       </Container>

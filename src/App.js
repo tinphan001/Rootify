@@ -4,10 +4,16 @@ import LandingPageContainer from '../src/Container/LandingPageContainer'
 import ArtistSearchContainer from '../src/Container/ArtistSearchContainer'
 
 class Home extends Component {
+
+  constructor(props) {
+    super(props)
+  }
+
   render() {
+    const pathName = this.props.location.pathname
     return (
       <div className="Home">
-        <LandingPageContainer/>
+        <LandingPageContainer pathName={pathName}/>
       </div>
     );
   }

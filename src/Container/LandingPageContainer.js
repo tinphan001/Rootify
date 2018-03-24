@@ -10,8 +10,9 @@ class LandingPageContainer extends Component {
   }
 
   render() {
+
     return (
-      <LandingPage handleSearchInput={this.handleSearchInput}>
+      <LandingPage pathName={this.props.pathName} handleSearchInput={this.handleSearchInput}>
       </LandingPage>
     )
   }

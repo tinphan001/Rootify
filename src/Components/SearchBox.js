@@ -48,7 +48,7 @@ class SearchBox extends Component {
 
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {searchInput: "", submitted: false};
   }
 
@@ -62,8 +62,14 @@ class SearchBox extends Component {
 
 
   render() {
-    if(this.state.submitted) {
+
+    const pathName = this.props.pathName
+
+    if(this.state.submitted && pathName=='/') {
       return <Redirect push to='/ArtistSearch'/>
+    }
+    if (this.state.submitted){
+      window.location.reload()
     }
 
     return (
